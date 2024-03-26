@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "json"
+    },
+    "brands": {
+      "displayName": "item-value",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.item-value"
+    }
+  }
+}
