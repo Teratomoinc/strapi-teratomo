@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_team_lists",
+  "info": {
+    "displayName": "TeamList",
+    "icon": "brush",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "quote": {
+      "type": "text"
+    }
+  }
+}

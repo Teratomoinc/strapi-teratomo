@@ -26,6 +26,19 @@ export interface SharedMedia extends Schema.Component {
   };
 }
 
+export interface SharedProducts extends Schema.Component {
+  collectionName: 'components_shared_products';
+  info: {
+    displayName: 'products';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    link: Attribute.String & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface SharedQuote extends Schema.Component {
   collectionName: 'components_shared_quotes';
   info: {
@@ -77,15 +90,34 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedTeamList extends Schema.Component {
+  collectionName: 'components_shared_team_lists';
+  info: {
+    displayName: 'TeamList';
+    icon: 'brush';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    position: Attribute.String & Attribute.Required;
+    avatar: Attribute.String & Attribute.Required;
+    description: Attribute.Blocks;
+    color: Attribute.String & Attribute.Required;
+    quote: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'shared.item-value': SharedItemValue;
       'shared.media': SharedMedia;
+      'shared.products': SharedProducts;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.team-list': SharedTeamList;
     }
   }
 }

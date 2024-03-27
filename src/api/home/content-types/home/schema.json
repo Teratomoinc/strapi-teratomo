@@ -20,6 +20,18 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.item-value"
+    },
+    "teamList": {
+      "displayName": "TeamList",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.team-list"
+    },
+    "products": {
+      "displayName": "products",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.products"
     }
   }
 }
