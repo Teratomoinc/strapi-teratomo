@@ -10,34 +10,63 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "body": {
-      "type": "json"
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "brands": {
       "displayName": "item-value",
       "type": "component",
       "repeatable": true,
-      "component": "shared.item-value"
+      "component": "shared.item-value",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "teamList": {
       "displayName": "TeamList",
       "type": "component",
       "repeatable": true,
-      "component": "shared.team-list"
+      "component": "shared.team-list",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "products": {
       "displayName": "products",
       "type": "component",
       "repeatable": true,
-      "component": "shared.products"
+      "component": "shared.products",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "contacts": {
       "displayName": "contacts",
       "type": "component",
       "repeatable": true,
-      "component": "shared.contacts"
+      "component": "shared.contacts",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
