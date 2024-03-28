@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_contacts",
+  "info": {
+    "displayName": "contacts",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "callToAction": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

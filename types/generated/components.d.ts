@@ -1,5 +1,21 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SharedContacts extends Schema.Component {
+  collectionName: 'components_shared_contacts';
+  info: {
+    displayName: 'contacts';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    callToAction: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    text: Attribute.String;
+  };
+}
+
 export interface SharedItemValue extends Schema.Component {
   collectionName: 'components_shared_item_values';
   info: {
@@ -110,6 +126,7 @@ export interface SharedTeamList extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'shared.contacts': SharedContacts;
       'shared.item-value': SharedItemValue;
       'shared.media': SharedMedia;
       'shared.products': SharedProducts;

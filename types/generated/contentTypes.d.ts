@@ -994,6 +994,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     brands: Attribute.Component<'shared.item-value', true>;
     teamList: Attribute.Component<'shared.team-list', true>;
     products: Attribute.Component<'shared.products', true>;
+    contacts: Attribute.Component<'shared.contacts', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

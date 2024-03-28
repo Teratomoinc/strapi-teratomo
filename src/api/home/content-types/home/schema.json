@@ -32,6 +32,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.products"
+    },
+    "contacts": {
+      "displayName": "contacts",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contacts"
     }
   }
 }
