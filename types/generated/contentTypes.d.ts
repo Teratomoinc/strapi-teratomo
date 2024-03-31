@@ -951,6 +951,7 @@ export interface ApiContactContact extends Schema.CollectionType {
     singularName: 'contact';
     pluralName: 'contacts';
     displayName: 'contact';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -959,6 +960,15 @@ export interface ApiContactContact extends Schema.CollectionType {
     fullname: Attribute.String;
     email: Attribute.Email;
     message: Attribute.Text;
+    company: Attribute.String;
+    jobtitle: Attribute.String;
+    phone: Attribute.String;
+    website: Attribute.String;
+    projectDuration: Attribute.String;
+    nameProject: Attribute.String;
+    category: Attribute.String;
+    skills: Attribute.Text;
+    plan: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1052,6 +1062,24 @@ export interface ApiHomeHome extends Schema.SingleType {
         };
       }>;
     contacts: Attribute.Component<'shared.contacts', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    items: Attribute.Component<'shared.basic-item', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mission: Attribute.JSON &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    vission: Attribute.JSON &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

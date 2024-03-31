@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact",
     "pluralName": "contacts",
-    "displayName": "contact"
+    "displayName": "contact",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,33 @@
       "type": "email"
     },
     "message": {
+      "type": "text"
+    },
+    "company": {
+      "type": "string"
+    },
+    "jobtitle": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "projectDuration": {
+      "type": "string"
+    },
+    "nameProject": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "text"
+    },
+    "plan": {
       "type": "text"
     }
   }

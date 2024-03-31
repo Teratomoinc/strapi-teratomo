@@ -15,7 +15,7 @@ module.exports = createCoreController("api::contact.contact", ({ strapi }) => ({
     const apiKey = process.env.KEY_HUBSPOT;
     try {
         console.log(ctx.request.body, ctx.request.body.data)
-      const { email, fullname, message } = ctx.request.body.data;
+      const { email, fullname, message, company, jobtitle, phone, website, projectDuration, nameProject, category, skills, plan } = ctx.request.body.data;
       const url = `${hubSpotUrl}/crm/v3/objects/contacts`;
       const requestOptions = {
         url: url,
@@ -31,6 +31,15 @@ module.exports = createCoreController("api::contact.contact", ({ strapi }) => ({
             firstname: fullname,
             message: message,
             hs_lead_status: "NEW",
+            company,
+            jobtitle,
+            phone,
+            website,
+            category,
+            skills,
+            plan,
+            project_duration: projectDuration,
+            name_project: nameProject,
           },
         }),
       };

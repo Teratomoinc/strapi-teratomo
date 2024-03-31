@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SharedBasicItem extends Schema.Component {
+  collectionName: 'components_shared_basic_items';
+  info: {
+    displayName: 'basicItem';
+    icon: 'bell';
+  };
+  attributes: {
+    icon: Attribute.String;
+    title: Attribute.String;
+    text: Attribute.Text;
+  };
+}
+
 export interface SharedContacts extends Schema.Component {
   collectionName: 'components_shared_contacts';
   info: {
@@ -126,6 +139,7 @@ export interface SharedTeamList extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'shared.basic-item': SharedBasicItem;
       'shared.contacts': SharedContacts;
       'shared.item-value': SharedItemValue;
       'shared.media': SharedMedia;

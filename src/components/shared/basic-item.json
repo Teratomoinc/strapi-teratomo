@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_basic_items",
+  "info": {
+    "displayName": "basicItem",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}
