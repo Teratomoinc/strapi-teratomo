@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service-page",
     "pluralName": "service-pages",
-    "displayName": "Service Page"
+    "displayName": "Service Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "blochainDev": {
+    "blockchainDev": {
       "pluginOptions": {
         "i18n": {
           "localized": true

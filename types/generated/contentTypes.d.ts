@@ -1107,6 +1107,7 @@ export interface ApiServicePageServicePage extends Schema.SingleType {
     singularName: 'service-page';
     pluralName: 'service-pages';
     displayName: 'Service Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1117,7 +1118,7 @@ export interface ApiServicePageServicePage extends Schema.SingleType {
     };
   };
   attributes: {
-    blochainDev: Attribute.JSON &
+    blockchainDev: Attribute.JSON &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
