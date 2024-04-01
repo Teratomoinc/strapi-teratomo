@@ -1111,11 +1111,36 @@ export interface ApiServicePageServicePage extends Schema.SingleType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    blockchainDev: Attribute.JSON;
-    fintechDev: Attribute.JSON;
-    oemSales: Attribute.JSON;
-    business: Attribute.JSON;
+    blochainDev: Attribute.JSON &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    fintechDev: Attribute.JSON &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    oemSales: Attribute.JSON &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    business: Attribute.JSON &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1131,6 +1156,12 @@ export interface ApiServicePageServicePage extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::service-page.service-page',
+      'oneToMany',
+      'api::service-page.service-page'
+    >;
+    locale: Attribute.String;
   };
 }
 
