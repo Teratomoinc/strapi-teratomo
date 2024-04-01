@@ -1101,6 +1101,39 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiServicePageServicePage extends Schema.SingleType {
+  collectionName: 'service_pages';
+  info: {
+    singularName: 'service-page';
+    pluralName: 'service-pages';
+    displayName: 'Service Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blockchainDev: Attribute.JSON;
+    fintechDev: Attribute.JSON;
+    oemSales: Attribute.JSON;
+    business: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service-page.service-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service-page.service-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Schema.CollectionType {
   collectionName: 'tests';
   info: {
@@ -1148,6 +1181,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::service-page.service-page': ApiServicePageServicePage;
       'api::test.test': ApiTestTest;
     }
   }
