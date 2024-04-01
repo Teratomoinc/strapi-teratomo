@@ -1,9 +1,26 @@
-module.exports = [
-  'strapi::logger',
+module.exports = ({ env}) => [
   'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        directives: {
+          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
+          'img-src': ["'self'", 'data:', 'cdn.jsdelivr.net', 'strapi.io', 'teratomo-web-prod.s3.us-east-1.amazonaws.com'],
+        },
+      }
+    },
+  },
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      header: '*',
+      origin: ['*']
+    }
+  },
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
