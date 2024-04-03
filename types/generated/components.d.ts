@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SharedAddress extends Schema.Component {
+  collectionName: 'components_shared_addresses';
+  info: {
+    displayName: 'Address';
+  };
+  attributes: {
+    latitude: Attribute.String;
+    longitude: Attribute.String;
+    addressName: Attribute.String;
+  };
+}
+
 export interface SharedBasicItem extends Schema.Component {
   collectionName: 'components_shared_basic_items';
   info: {
@@ -220,6 +232,7 @@ export interface SharedTeamList extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'shared.address': SharedAddress;
       'shared.basic-item': SharedBasicItem;
       'shared.contacts': SharedContacts;
       'shared.evolution': SharedEvolution;
