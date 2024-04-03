@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "displayName": "features",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

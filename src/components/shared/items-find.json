@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_items_finds",
+  "info": {
+    "displayName": "itemsFind",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

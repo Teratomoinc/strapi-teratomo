@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_evolutions",
+  "info": {
+    "displayName": "evolution",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sub": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "itemsFind",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.items-find"
+    }
+  }
+}

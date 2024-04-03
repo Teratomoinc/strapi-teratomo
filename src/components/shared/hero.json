@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "sub": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

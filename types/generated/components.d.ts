@@ -29,6 +29,48 @@ export interface SharedContacts extends Schema.Component {
   };
 }
 
+export interface SharedEvolution extends Schema.Component {
+  collectionName: 'components_shared_evolutions';
+  info: {
+    displayName: 'evolution';
+    icon: 'bold';
+    description: '';
+  };
+  attributes: {
+    sub: Attribute.String;
+    title: Attribute.String;
+    items: Attribute.Component<'shared.items-find', true>;
+  };
+}
+
+export interface SharedFeatures extends Schema.Component {
+  collectionName: 'components_shared_features';
+  info: {
+    displayName: 'features';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    tag: Attribute.String;
+    icon: Attribute.String;
+    text: Attribute.Text;
+    title: Attribute.String;
+  };
+}
+
+export interface SharedHero extends Schema.Component {
+  collectionName: 'components_shared_heroes';
+  info: {
+    displayName: 'hero';
+    icon: 'bold';
+  };
+  attributes: {
+    sub: Attribute.String;
+    tag: Attribute.String;
+    quote: Attribute.Text;
+    title: Attribute.String;
+  };
+}
+
 export interface SharedItemValue extends Schema.Component {
   collectionName: 'components_shared_item_values';
   info: {
@@ -41,6 +83,30 @@ export interface SharedItemValue extends Schema.Component {
     link: Attribute.String;
     description: Attribute.Text;
     icon: Attribute.Media;
+  };
+}
+
+export interface SharedItemsFind extends Schema.Component {
+  collectionName: 'components_shared_items_finds';
+  info: {
+    displayName: 'itemsFind';
+    icon: 'book';
+  };
+  attributes: {
+    text: Attribute.Text;
+  };
+}
+
+export interface SharedItems extends Schema.Component {
+  collectionName: 'components_shared_items';
+  info: {
+    displayName: 'items';
+    icon: 'attachment';
+  };
+  attributes: {
+    img: Attribute.String;
+    text: Attribute.Text;
+    title: Attribute.String;
   };
 }
 
@@ -119,6 +185,21 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedStudies extends Schema.Component {
+  collectionName: 'components_shared_studies';
+  info: {
+    displayName: 'studies';
+    icon: 'bell';
+    description: '';
+  };
+  attributes: {
+    sub: Attribute.String;
+    tag: Attribute.String;
+    title: Attribute.String;
+    items: Attribute.Component<'shared.items', true>;
+  };
+}
+
 export interface SharedTeamList extends Schema.Component {
   collectionName: 'components_shared_team_lists';
   info: {
@@ -141,13 +222,19 @@ declare module '@strapi/types' {
     export interface Components {
       'shared.basic-item': SharedBasicItem;
       'shared.contacts': SharedContacts;
+      'shared.evolution': SharedEvolution;
+      'shared.features': SharedFeatures;
+      'shared.hero': SharedHero;
       'shared.item-value': SharedItemValue;
+      'shared.items-find': SharedItemsFind;
+      'shared.items': SharedItems;
       'shared.media': SharedMedia;
       'shared.products': SharedProducts;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.studies': SharedStudies;
       'shared.team-list': SharedTeamList;
     }
   }

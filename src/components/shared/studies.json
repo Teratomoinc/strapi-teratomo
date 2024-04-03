@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_studies",
+  "info": {
+    "displayName": "studies",
+    "icon": "bell",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sub": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "items",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.items"
+    }
+  }
+}
