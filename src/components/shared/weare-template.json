@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_weare_templates",
+  "info": {
+    "displayName": "weareTemplate",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

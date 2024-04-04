@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_contacts_templates",
+  "info": {
+    "displayName": "contactsTemplate",
+    "icon": "cast",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "callToAction": {
+      "type": "boolean",
+      "default": false
+    },
+    "link": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

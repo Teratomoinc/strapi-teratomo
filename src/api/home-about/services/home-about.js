@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * find-tech service
+ * home-about service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::find-tech.find-tech');
+module.exports = createCoreService('api::home-about.home-about');

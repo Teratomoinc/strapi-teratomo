@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "find_teches",
+  "collectionName": "oem_sales",
   "info": {
-    "singularName": "find-tech",
-    "pluralName": "find-teches",
-    "displayName": "findTech",
+    "singularName": "oem-sale",
+    "pluralName": "oem-sales",
+    "displayName": "oemSales",
     "description": ""
   },
   "options": {
@@ -17,7 +17,7 @@
   },
   "attributes": {
     "hero": {
-      "displayName": "hero",
+      "displayName": "heroTemplate",
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
@@ -25,10 +25,10 @@
           "localized": true
         }
       },
-      "component": "shared.hero"
+      "component": "shared.hero-template"
     },
     "studies": {
-      "displayName": "studies",
+      "displayName": "studiesTemplate",
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
@@ -36,21 +36,10 @@
           "localized": true
         }
       },
-      "component": "shared.studies"
-    },
-    "evolution": {
-      "displayName": "evolution",
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.evolution"
+      "component": "shared.studies-template"
     },
     "features": {
-      "displayName": "features",
+      "displayName": "featurestemplate",
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -58,7 +47,28 @@
           "localized": true
         }
       },
-      "component": "shared.features"
+      "component": "shared.featurestemplate"
+    },
+    "evolution": {
+      "displayName": "evolutionTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.evolution-template"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.metada-template"
     }
   }
 }

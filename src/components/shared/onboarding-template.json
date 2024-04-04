@@ -1,0 +1,106 @@
+{
+  "collectionName": "components_shared_onboarding_templates",
+  "info": {
+    "displayName": "onboardingTemplate",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "titleTwo": {
+      "type": "string"
+    },
+    "subtitleTwo": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "linkWebsite": {
+      "type": "string"
+    },
+    "titleThree": {
+      "type": "string"
+    },
+    "subtitleThree": {
+      "type": "string"
+    },
+    "projectDuration": {
+      "type": "string"
+    },
+    "titleFour": {
+      "type": "string"
+    },
+    "subtitleFour": {
+      "type": "text"
+    },
+    "projectName": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "titleFive": {
+      "type": "string"
+    },
+    "subtitleFive": {
+      "type": "string"
+    },
+    "descriptionFive": {
+      "type": "text"
+    },
+    "selectFive": {
+      "type": "string"
+    },
+    "titleSix": {
+      "type": "string"
+    },
+    "subtitleSix": {
+      "type": "string"
+    },
+    "descriptionSix": {
+      "type": "string"
+    },
+    "plan": {
+      "type": "string"
+    },
+    "planPlaceHolder": {
+      "type": "string"
+    },
+    "titleSeven": {
+      "type": "string"
+    },
+    "subtitleSeven": {
+      "type": "string"
+    },
+    "buttonBack": {
+      "type": "string"
+    },
+    "buttonNext": {
+      "type": "string"
+    },
+    "buttonStart": {
+      "type": "string"
+    },
+    "buttonFinish": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_items_template_homes",
+  "info": {
+    "displayName": "itemsTemplateHome",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

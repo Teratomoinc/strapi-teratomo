@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_studies_templates",
+  "info": {
+    "displayName": "studiesTemplate",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "sub": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "itemsTemplate",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.items-template"
+    }
+  }
+}

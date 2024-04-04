@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_hero_templates",
+  "info": {
+    "displayName": "heroTemplate",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "sub": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

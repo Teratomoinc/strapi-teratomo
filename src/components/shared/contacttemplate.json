@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_contacttemplates",
+  "info": {
+    "displayName": "contacttemplate",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contacts-template"
+    }
+  }
+}

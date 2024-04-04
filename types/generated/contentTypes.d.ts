@@ -908,6 +908,147 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlockchainDevBlockchainDev extends Schema.SingleType {
+  collectionName: 'blockchain_devs';
+  info: {
+    singularName: 'blockchain-dev';
+    pluralName: 'blockchain-devs';
+    displayName: 'blockchainDev';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.hero-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    studies: Attribute.Component<'shared.studies-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    features: Attribute.Component<'shared.featurestemplate', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    evolution: Attribute.Component<'shared.evolution-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blockchain-dev.blockchain-dev',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blockchain-dev.blockchain-dev',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::blockchain-dev.blockchain-dev',
+      'oneToMany',
+      'api::blockchain-dev.blockchain-dev'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiBusinessBusiness extends Schema.SingleType {
+  collectionName: 'businesses';
+  info: {
+    singularName: 'business';
+    pluralName: 'businesses';
+    displayName: 'business';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.hero-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    studies: Attribute.Component<'shared.studies-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    features: Attribute.Component<'shared.featurestemplate', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    evolution: Attribute.Component<'shared.evolution-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::business.business',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::business.business',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::business.business',
+      'oneToMany',
+      'api::business.business'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
@@ -987,13 +1128,12 @@ export interface ApiContactContact extends Schema.CollectionType {
   };
 }
 
-export interface ApiFindTechFindTech extends Schema.SingleType {
-  collectionName: 'find_teches';
+export interface ApiFintechDevFintechDev extends Schema.SingleType {
+  collectionName: 'fintech_devs';
   info: {
-    singularName: 'find-tech';
-    pluralName: 'find-teches';
-    displayName: 'findTech';
-    description: '';
+    singularName: 'fintech-dev';
+    pluralName: 'fintech-devs';
+    displayName: 'fintechDev';
   };
   options: {
     draftAndPublish: true;
@@ -1004,25 +1144,31 @@ export interface ApiFindTechFindTech extends Schema.SingleType {
     };
   };
   attributes: {
-    hero: Attribute.Component<'shared.hero'> &
+    hero: Attribute.Component<'shared.hero-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    studies: Attribute.Component<'shared.studies'> &
+    studies: Attribute.Component<'shared.studies-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    evolution: Attribute.Component<'shared.evolution'> &
+    features: Attribute.Component<'shared.featurestemplate', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    features: Attribute.Component<'shared.features', true> &
+    evolution: Attribute.Component<'shared.evolution-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'shared.metada-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1032,21 +1178,21 @@ export interface ApiFindTechFindTech extends Schema.SingleType {
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::find-tech.find-tech',
+      'api::fintech-dev.fintech-dev',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::find-tech.find-tech',
+      'api::fintech-dev.fintech-dev',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     localizations: Attribute.Relation<
-      'api::find-tech.find-tech',
+      'api::fintech-dev.fintech-dev',
       'oneToMany',
-      'api::find-tech.find-tech'
+      'api::fintech-dev.fintech-dev'
     >;
     locale: Attribute.String;
   };
@@ -1070,6 +1216,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     defaultSeo: Attribute.Component<'shared.seo'>;
     address: Attribute.Component<'shared.address'>;
     socials: Attribute.Component<'shared.item-value', true>;
+    metadata: Attribute.Component<'shared.metada-template'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1168,6 +1315,131 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiHomeAboutHomeAbout extends Schema.SingleType {
+  collectionName: 'home_abouts';
+  info: {
+    singularName: 'home-about';
+    pluralName: 'home-abouts';
+    displayName: 'homeAbout';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    brands: Attribute.Component<'shared.brands-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mission: Attribute.Component<'shared.mission-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    vission: Attribute.Component<'shared.mission-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero: Attribute.Component<'shared.hero-home-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    menu: Attribute.Component<'shared.menu-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    team: Attribute.Component<'shared.team-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contact: Attribute.Component<'shared.contacttemplate'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    basic: Attribute.Component<'shared.basic-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    weare: Attribute.Component<'shared.weare-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    studies: Attribute.Component<'shared.weare-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contactUs: Attribute.Component<'shared.contact-us'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    services: Attribute.Component<'shared.services-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    onboarding: Attribute.Component<'shared.onboarding-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-about.home-about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-about.home-about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::home-about.home-about',
+      'oneToMany',
+      'api::home-about.home-about'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiLegalLegal extends Schema.CollectionType {
   collectionName: 'legals';
   info: {
@@ -1225,6 +1497,77 @@ export interface ApiLegalLegal extends Schema.CollectionType {
       'api::legal.legal',
       'oneToMany',
       'api::legal.legal'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiOemSaleOemSale extends Schema.SingleType {
+  collectionName: 'oem_sales';
+  info: {
+    singularName: 'oem-sale';
+    pluralName: 'oem-sales';
+    displayName: 'oemSales';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.hero-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    studies: Attribute.Component<'shared.studies-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    features: Attribute.Component<'shared.featurestemplate', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    evolution: Attribute.Component<'shared.evolution-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::oem-sale.oem-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::oem-sale.oem-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::oem-sale.oem-sale',
+      'oneToMany',
+      'api::oem-sale.oem-sale'
     >;
     locale: Attribute.String;
   };
@@ -1396,12 +1739,16 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::blockchain-dev.blockchain-dev': ApiBlockchainDevBlockchainDev;
+      'api::business.business': ApiBusinessBusiness;
       'api::category.category': ApiCategoryCategory;
       'api::contact.contact': ApiContactContact;
-      'api::find-tech.find-tech': ApiFindTechFindTech;
+      'api::fintech-dev.fintech-dev': ApiFintechDevFintechDev;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::home-about.home-about': ApiHomeAboutHomeAbout;
       'api::legal.legal': ApiLegalLegal;
+      'api::oem-sale.oem-sale': ApiOemSaleOemSale;
       'api::review.review': ApiReviewReview;
       'api::service-page.service-page': ApiServicePageServicePage;
       'api::test.test': ApiTestTest;

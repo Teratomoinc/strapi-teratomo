@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_contactuses",
+  "info": {
+    "displayName": "contactUs",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

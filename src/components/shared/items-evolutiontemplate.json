@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_items_evolutiontemplates",
+  "info": {
+    "displayName": "itemsEvolutiontemplate",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

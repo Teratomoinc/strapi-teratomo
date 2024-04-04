@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_basic_templates",
+  "info": {
+    "displayName": "basicTemplate",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.items-template-home"
+    }
+  }
+}

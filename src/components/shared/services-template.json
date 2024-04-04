@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_services_templates",
+  "info": {
+    "displayName": "servicesTemplate",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

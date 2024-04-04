@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_evolution_templates",
+  "info": {
+    "displayName": "evolutionTemplate",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "sub": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "itemsEvolutiontemplate",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.items-evolutiontemplate"
+    }
+  }
+}

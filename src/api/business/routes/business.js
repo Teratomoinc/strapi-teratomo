@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * find-tech router
+ * business router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::find-tech.find-tech');
+module.exports = createCoreRouter('api::business.business');

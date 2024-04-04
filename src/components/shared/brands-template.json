@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_brands_templates",
+  "info": {
+    "displayName": "brandsTemplate",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string",
+      "default": "#"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

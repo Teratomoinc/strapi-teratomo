@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_hero_home_templates",
+  "info": {
+    "displayName": "heroHomeTemplate",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ownerName": {
+      "type": "string"
+    },
+    "ownerDescription": {
+      "type": "text"
+    }
+  }
+}

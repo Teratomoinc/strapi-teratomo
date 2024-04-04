@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_mission_templates",
+  "info": {
+    "displayName": "missionTemplate",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

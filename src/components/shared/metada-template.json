@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_metada_templates",
+  "info": {
+    "displayName": "metadaTemplate",
+    "icon": "car"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "text"
+    }
+  }
+}

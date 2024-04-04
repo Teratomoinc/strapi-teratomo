@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_menu_items_templates",
+  "info": {
+    "displayName": "menuItemsTemplate",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "lang": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

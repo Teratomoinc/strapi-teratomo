@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_items_templates",
+  "info": {
+    "displayName": "itemsTemplate",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

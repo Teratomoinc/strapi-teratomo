@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * find-tech controller
+ * oem-sale controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::find-tech.find-tech');
+module.exports = createCoreController('api::oem-sale.oem-sale');

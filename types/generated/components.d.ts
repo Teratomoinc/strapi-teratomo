@@ -27,6 +27,68 @@ export interface SharedBasicItem extends Schema.Component {
   };
 }
 
+export interface SharedBasicTemplate extends Schema.Component {
+  collectionName: 'components_shared_basic_templates';
+  info: {
+    displayName: 'basicTemplate';
+    icon: 'briefcase';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+    items: Attribute.Component<'shared.items-template-home', true>;
+  };
+}
+
+export interface SharedBrandsTemplate extends Schema.Component {
+  collectionName: 'components_shared_brands_templates';
+  info: {
+    displayName: 'brandsTemplate';
+    icon: 'bell';
+  };
+  attributes: {
+    name: Attribute.String;
+    link: Attribute.String & Attribute.DefaultTo<'#'>;
+    description: Attribute.Text;
+    icon: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface SharedContactUs extends Schema.Component {
+  collectionName: 'components_shared_contactuses';
+  info: {
+    displayName: 'contactUs';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    text: Attribute.String;
+    email: Attribute.String;
+    title: Attribute.String;
+    address: Attribute.String;
+    message: Attribute.String;
+    fullName: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface SharedContactsTemplate extends Schema.Component {
+  collectionName: 'components_shared_contacts_templates';
+  info: {
+    displayName: 'contactsTemplate';
+    icon: 'cast';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    callToAction: Attribute.Boolean & Attribute.DefaultTo<false>;
+    link: Attribute.String;
+    text: Attribute.String;
+  };
+}
+
 export interface SharedContacts extends Schema.Component {
   collectionName: 'components_shared_contacts';
   info: {
@@ -40,6 +102,33 @@ export interface SharedContacts extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<false>;
     text: Attribute.String;
+  };
+}
+
+export interface SharedContacttemplate extends Schema.Component {
+  collectionName: 'components_shared_contacttemplates';
+  info: {
+    displayName: 'contacttemplate';
+    icon: 'briefcase';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+    items: Attribute.Component<'shared.contacts-template', true>;
+  };
+}
+
+export interface SharedEvolutionTemplate extends Schema.Component {
+  collectionName: 'components_shared_evolution_templates';
+  info: {
+    displayName: 'evolutionTemplate';
+    icon: 'attachment';
+  };
+  attributes: {
+    sub: Attribute.String;
+    title: Attribute.String;
+    items: Attribute.Component<'shared.items-evolutiontemplate', true>;
   };
 }
 
@@ -67,6 +156,47 @@ export interface SharedFeatures extends Schema.Component {
     tag: Attribute.String;
     icon: Attribute.String;
     text: Attribute.Text;
+    title: Attribute.String;
+  };
+}
+
+export interface SharedFeaturestemplate extends Schema.Component {
+  collectionName: 'components_shared_featurestemplates';
+  info: {
+    displayName: 'featurestemplate';
+    icon: 'bold';
+  };
+  attributes: {
+    tag: Attribute.String;
+    icon: Attribute.String;
+    text: Attribute.Text;
+    title: Attribute.String;
+  };
+}
+
+export interface SharedHeroHomeTemplate extends Schema.Component {
+  collectionName: 'components_shared_hero_home_templates';
+  info: {
+    displayName: 'heroHomeTemplate';
+    icon: 'attachment';
+  };
+  attributes: {
+    title: Attribute.String;
+    ownerName: Attribute.String;
+    ownerDescription: Attribute.Text;
+  };
+}
+
+export interface SharedHeroTemplate extends Schema.Component {
+  collectionName: 'components_shared_hero_templates';
+  info: {
+    displayName: 'heroTemplate';
+    icon: 'attachment';
+  };
+  attributes: {
+    sub: Attribute.String;
+    tag: Attribute.String;
+    quote: Attribute.Text;
     title: Attribute.String;
   };
 }
@@ -100,6 +230,17 @@ export interface SharedItemValue extends Schema.Component {
   };
 }
 
+export interface SharedItemsEvolutiontemplate extends Schema.Component {
+  collectionName: 'components_shared_items_evolutiontemplates';
+  info: {
+    displayName: 'itemsEvolutiontemplate';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    text: Attribute.Text;
+  };
+}
+
 export interface SharedItemsFind extends Schema.Component {
   collectionName: 'components_shared_items_finds';
   info: {
@@ -108,6 +249,32 @@ export interface SharedItemsFind extends Schema.Component {
   };
   attributes: {
     text: Attribute.Text;
+  };
+}
+
+export interface SharedItemsTemplateHome extends Schema.Component {
+  collectionName: 'components_shared_items_template_homes';
+  info: {
+    displayName: 'itemsTemplateHome';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    icon: Attribute.String;
+    title: Attribute.String;
+    text: Attribute.Text;
+  };
+}
+
+export interface SharedItemsTemplate extends Schema.Component {
+  collectionName: 'components_shared_items_templates';
+  info: {
+    displayName: 'itemsTemplate';
+    icon: 'attachment';
+  };
+  attributes: {
+    img: Attribute.String;
+    text: Attribute.Text;
+    title: Attribute.String;
   };
 }
 
@@ -132,6 +299,98 @@ export interface SharedMedia extends Schema.Component {
   };
   attributes: {
     file: Attribute.Media;
+  };
+}
+
+export interface SharedMenuItemsTemplate extends Schema.Component {
+  collectionName: 'components_shared_menu_items_templates';
+  info: {
+    displayName: 'menuItemsTemplate';
+    icon: 'briefcase';
+  };
+  attributes: {
+    lang: Attribute.String;
+    text: Attribute.String;
+  };
+}
+
+export interface SharedMenuTemplate extends Schema.Component {
+  collectionName: 'components_shared_menu_templates';
+  info: {
+    displayName: 'menuTemplate';
+    icon: 'briefcase';
+  };
+  attributes: {
+    title: Attribute.String;
+    items: Attribute.Component<'shared.menu-items-template', true>;
+  };
+}
+
+export interface SharedMetadaTemplate extends Schema.Component {
+  collectionName: 'components_shared_metada_templates';
+  info: {
+    displayName: 'metadaTemplate';
+    icon: 'car';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    keywords: Attribute.Text;
+  };
+}
+
+export interface SharedMissionTemplate extends Schema.Component {
+  collectionName: 'components_shared_mission_templates';
+  info: {
+    displayName: 'missionTemplate';
+    icon: 'bold';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface SharedOnboardingTemplate extends Schema.Component {
+  collectionName: 'components_shared_onboarding_templates';
+  info: {
+    displayName: 'onboardingTemplate';
+    icon: 'brush';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.String;
+    titleTwo: Attribute.String;
+    subtitleTwo: Attribute.String;
+    companyName: Attribute.String;
+    contact: Attribute.String;
+    position: Attribute.String;
+    phone: Attribute.String;
+    linkWebsite: Attribute.String;
+    titleThree: Attribute.String;
+    subtitleThree: Attribute.String;
+    projectDuration: Attribute.String;
+    titleFour: Attribute.String;
+    subtitleFour: Attribute.Text;
+    projectName: Attribute.String;
+    category: Attribute.String;
+    titleFive: Attribute.String;
+    subtitleFive: Attribute.String;
+    descriptionFive: Attribute.Text;
+    selectFive: Attribute.String;
+    titleSix: Attribute.String;
+    subtitleSix: Attribute.String;
+    descriptionSix: Attribute.String;
+    plan: Attribute.String;
+    planPlaceHolder: Attribute.String;
+    titleSeven: Attribute.String;
+    subtitleSeven: Attribute.String;
+    buttonBack: Attribute.String;
+    buttonNext: Attribute.String;
+    buttonStart: Attribute.String;
+    buttonFinish: Attribute.String;
   };
 }
 
@@ -187,6 +446,20 @@ export interface SharedSeo extends Schema.Component {
   };
 }
 
+export interface SharedServicesTemplate extends Schema.Component {
+  collectionName: 'components_shared_services_templates';
+  info: {
+    displayName: 'servicesTemplate';
+    icon: 'book';
+  };
+  attributes: {
+    img: Attribute.String;
+    tag: Attribute.String;
+    text: Attribute.Text;
+    title: Attribute.String;
+  };
+}
+
 export interface SharedSlider extends Schema.Component {
   collectionName: 'components_shared_sliders';
   info: {
@@ -196,6 +469,20 @@ export interface SharedSlider extends Schema.Component {
   };
   attributes: {
     files: Attribute.Media;
+  };
+}
+
+export interface SharedStudiesTemplate extends Schema.Component {
+  collectionName: 'components_shared_studies_templates';
+  info: {
+    displayName: 'studiesTemplate';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    sub: Attribute.String;
+    tag: Attribute.String;
+    title: Attribute.String;
+    items: Attribute.Component<'shared.items-template', true>;
   };
 }
 
@@ -211,6 +498,22 @@ export interface SharedStudies extends Schema.Component {
     tag: Attribute.String;
     title: Attribute.String;
     items: Attribute.Component<'shared.items', true>;
+  };
+}
+
+export interface SharedTeamListTemplate extends Schema.Component {
+  collectionName: 'components_shared_team_list_templates';
+  info: {
+    displayName: 'teamListTemplate';
+    icon: 'apps';
+  };
+  attributes: {
+    name: Attribute.String;
+    position: Attribute.String;
+    avatar: Attribute.String;
+    color: Attribute.String;
+    quote: Attribute.Text;
+    description: Attribute.Blocks;
   };
 }
 
@@ -231,26 +534,75 @@ export interface SharedTeamList extends Schema.Component {
   };
 }
 
+export interface SharedTeamTemplate extends Schema.Component {
+  collectionName: 'components_shared_team_templates';
+  info: {
+    displayName: 'teamTemplate';
+    icon: 'bell';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.String;
+    items: Attribute.Component<'shared.team-list-template', true>;
+  };
+}
+
+export interface SharedWeareTemplate extends Schema.Component {
+  collectionName: 'components_shared_weare_templates';
+  info: {
+    displayName: 'weareTemplate';
+    icon: 'bell';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'shared.address': SharedAddress;
       'shared.basic-item': SharedBasicItem;
+      'shared.basic-template': SharedBasicTemplate;
+      'shared.brands-template': SharedBrandsTemplate;
+      'shared.contact-us': SharedContactUs;
+      'shared.contacts-template': SharedContactsTemplate;
       'shared.contacts': SharedContacts;
+      'shared.contacttemplate': SharedContacttemplate;
+      'shared.evolution-template': SharedEvolutionTemplate;
       'shared.evolution': SharedEvolution;
       'shared.features': SharedFeatures;
+      'shared.featurestemplate': SharedFeaturestemplate;
+      'shared.hero-home-template': SharedHeroHomeTemplate;
+      'shared.hero-template': SharedHeroTemplate;
       'shared.hero': SharedHero;
       'shared.item-value': SharedItemValue;
+      'shared.items-evolutiontemplate': SharedItemsEvolutiontemplate;
       'shared.items-find': SharedItemsFind;
+      'shared.items-template-home': SharedItemsTemplateHome;
+      'shared.items-template': SharedItemsTemplate;
       'shared.items': SharedItems;
       'shared.media': SharedMedia;
+      'shared.menu-items-template': SharedMenuItemsTemplate;
+      'shared.menu-template': SharedMenuTemplate;
+      'shared.metada-template': SharedMetadaTemplate;
+      'shared.mission-template': SharedMissionTemplate;
+      'shared.onboarding-template': SharedOnboardingTemplate;
       'shared.products': SharedProducts;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
+      'shared.services-template': SharedServicesTemplate;
       'shared.slider': SharedSlider;
+      'shared.studies-template': SharedStudiesTemplate;
       'shared.studies': SharedStudies;
+      'shared.team-list-template': SharedTeamListTemplate;
       'shared.team-list': SharedTeamList;
+      'shared.team-template': SharedTeamTemplate;
+      'shared.weare-template': SharedWeareTemplate;
     }
   }
 }

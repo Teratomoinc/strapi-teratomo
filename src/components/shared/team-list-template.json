@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_team_list_templates",
+  "info": {
+    "displayName": "teamListTemplate",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

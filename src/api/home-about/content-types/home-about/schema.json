@@ -1,0 +1,171 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_abouts",
+  "info": {
+    "singularName": "home-about",
+    "pluralName": "home-abouts",
+    "displayName": "homeAbout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "brands": {
+      "displayName": "brandsTemplate",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.brands-template"
+    },
+    "mission": {
+      "displayName": "missionTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.mission-template"
+    },
+    "vission": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.mission-template"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.metada-template"
+    },
+    "hero": {
+      "displayName": "heroHomeTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.hero-home-template"
+    },
+    "menu": {
+      "displayName": "menuTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.menu-template"
+    },
+    "team": {
+      "displayName": "teamTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.team-template"
+    },
+    "contact": {
+      "displayName": "contacttemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.contacttemplate"
+    },
+    "basic": {
+      "displayName": "basicTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.basic-template"
+    },
+    "weare": {
+      "displayName": "weareTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.weare-template"
+    },
+    "studies": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.weare-template"
+    },
+    "contactUs": {
+      "displayName": "contactUs",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.contact-us"
+    },
+    "services": {
+      "displayName": "servicesTemplate",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.services-template"
+    },
+    "onboarding": {
+      "displayName": "onboardingTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.onboarding-template"
+    }
+  }
+}
