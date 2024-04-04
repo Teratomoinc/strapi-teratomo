@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_addresses",
   "info": {
-    "displayName": "Address"
+    "displayName": "Address",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,6 +14,9 @@
     },
     "addressName": {
       "type": "string"
+    },
+    "mapLink": {
+      "type": "text"
     }
   }
 }

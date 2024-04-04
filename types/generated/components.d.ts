@@ -4,11 +4,13 @@ export interface SharedAddress extends Schema.Component {
   collectionName: 'components_shared_addresses';
   info: {
     displayName: 'Address';
+    description: '';
   };
   attributes: {
     latitude: Attribute.String;
     longitude: Attribute.String;
     addressName: Attribute.String;
+    mapLink: Attribute.Text;
   };
 }
 
