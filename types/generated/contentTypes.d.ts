@@ -1579,6 +1579,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     singularName: 'review';
     pluralName: 'reviews';
     displayName: 'review';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1602,6 +1603,12 @@ export interface ApiReviewReview extends Schema.CollectionType {
         };
       }>;
     description: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    img: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
