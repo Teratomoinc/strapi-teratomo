@@ -50,6 +50,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.metada-template"
+    },
+    "navItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav-item"
+    },
+    "footerItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.sub-nav-items"
     }
   }
 }
