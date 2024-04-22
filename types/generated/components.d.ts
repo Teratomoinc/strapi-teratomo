@@ -339,11 +339,13 @@ export interface SharedMetadaTemplate extends Schema.Component {
   info: {
     displayName: 'metadaTemplate';
     icon: 'car';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     keywords: Attribute.Text;
+    images: Attribute.Media;
   };
 }
 
