@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_sub_nav_items",
+  "info": {
+    "displayName": "subNavItems"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

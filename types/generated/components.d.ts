@@ -174,6 +174,14 @@ export interface SharedFeaturestemplate extends Schema.Component {
   };
 }
 
+export interface SharedFooter extends Schema.Component {
+  collectionName: 'components_shared_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {};
+}
+
 export interface SharedHeroHomeTemplate extends Schema.Component {
   collectionName: 'components_shared_hero_home_templates';
   info: {
@@ -352,6 +360,18 @@ export interface SharedMissionTemplate extends Schema.Component {
   };
 }
 
+export interface SharedNavItem extends Schema.Component {
+  collectionName: 'components_shared_nav_items';
+  info: {
+    displayName: 'navItem';
+  };
+  attributes: {
+    link: Attribute.String;
+    title: Attribute.String;
+    subItems: Attribute.Component<'shared.sub-nav-items', true>;
+  };
+}
+
 export interface SharedOnboardingTemplate extends Schema.Component {
   collectionName: 'components_shared_onboarding_templates';
   info: {
@@ -501,6 +521,17 @@ export interface SharedStudies extends Schema.Component {
   };
 }
 
+export interface SharedSubNavItems extends Schema.Component {
+  collectionName: 'components_shared_sub_nav_items';
+  info: {
+    displayName: 'subNavItems';
+  };
+  attributes: {
+    title: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
 export interface SharedTeamListTemplate extends Schema.Component {
   collectionName: 'components_shared_team_list_templates';
   info: {
@@ -576,6 +607,7 @@ declare module '@strapi/types' {
       'shared.evolution': SharedEvolution;
       'shared.features': SharedFeatures;
       'shared.featurestemplate': SharedFeaturestemplate;
+      'shared.footer': SharedFooter;
       'shared.hero-home-template': SharedHeroHomeTemplate;
       'shared.hero-template': SharedHeroTemplate;
       'shared.hero': SharedHero;
@@ -590,6 +622,7 @@ declare module '@strapi/types' {
       'shared.menu-template': SharedMenuTemplate;
       'shared.metada-template': SharedMetadaTemplate;
       'shared.mission-template': SharedMissionTemplate;
+      'shared.nav-item': SharedNavItem;
       'shared.onboarding-template': SharedOnboardingTemplate;
       'shared.products': SharedProducts;
       'shared.quote': SharedQuote;
@@ -599,6 +632,7 @@ declare module '@strapi/types' {
       'shared.slider': SharedSlider;
       'shared.studies-template': SharedStudiesTemplate;
       'shared.studies': SharedStudies;
+      'shared.sub-nav-items': SharedSubNavItems;
       'shared.team-list-template': SharedTeamListTemplate;
       'shared.team-list': SharedTeamList;
       'shared.team-template': SharedTeamTemplate;

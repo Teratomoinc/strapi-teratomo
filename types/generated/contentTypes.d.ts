@@ -1217,6 +1217,8 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     address: Attribute.Component<'shared.address'>;
     socials: Attribute.Component<'shared.item-value', true>;
     metadata: Attribute.Component<'shared.metada-template'>;
+    navItems: Attribute.Component<'shared.nav-item', true>;
+    footerItems: Attribute.Component<'shared.sub-nav-items', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
