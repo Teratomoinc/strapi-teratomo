@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_input_templates",
+  "info": {
+    "displayName": "inputTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    }
+  }
+}

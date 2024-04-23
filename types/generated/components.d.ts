@@ -223,6 +223,17 @@ export interface SharedHero extends Schema.Component {
   };
 }
 
+export interface SharedInputTemplate extends Schema.Component {
+  collectionName: 'components_shared_input_templates';
+  info: {
+    displayName: 'inputTemplate';
+  };
+  attributes: {
+    label: Attribute.String;
+    placeholder: Attribute.String;
+  };
+}
+
 export interface SharedItemValue extends Schema.Component {
   collectionName: 'components_shared_item_values';
   info: {
@@ -379,40 +390,15 @@ export interface SharedOnboardingTemplate extends Schema.Component {
   info: {
     displayName: 'onboardingTemplate';
     icon: 'brush';
+    description: '';
   };
   attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
-    description: Attribute.String;
-    titleTwo: Attribute.String;
-    subtitleTwo: Attribute.String;
-    companyName: Attribute.String;
-    contact: Attribute.String;
-    position: Attribute.String;
-    phone: Attribute.String;
-    linkWebsite: Attribute.String;
-    titleThree: Attribute.String;
-    subtitleThree: Attribute.String;
-    projectDuration: Attribute.String;
-    titleFour: Attribute.String;
-    subtitleFour: Attribute.Text;
-    projectName: Attribute.String;
-    category: Attribute.String;
-    titleFive: Attribute.String;
-    subtitleFive: Attribute.String;
-    descriptionFive: Attribute.Text;
-    selectFive: Attribute.String;
-    titleSix: Attribute.String;
-    subtitleSix: Attribute.String;
-    descriptionSix: Attribute.String;
-    plan: Attribute.String;
-    planPlaceHolder: Attribute.String;
-    titleSeven: Attribute.String;
-    subtitleSeven: Attribute.String;
     buttonBack: Attribute.String;
     buttonNext: Attribute.String;
     buttonStart: Attribute.String;
     buttonFinish: Attribute.String;
+    steps: Attribute.Component<'shared.step-template', true>;
+    inputs: Attribute.Component<'shared.input-template', true>;
   };
 }
 
@@ -438,6 +424,23 @@ export interface SharedQuote extends Schema.Component {
   attributes: {
     title: Attribute.String;
     body: Attribute.Text;
+  };
+}
+
+export interface SharedReviewTemplate extends Schema.Component {
+  collectionName: 'components_shared_review_templates';
+  info: {
+    displayName: 'reviewTemplate';
+  };
+  attributes: {
+    tag: Attribute.String;
+    title: Attribute.String;
+    subtitle: Attribute.Text;
+    reviews: Attribute.Relation<
+      'shared.review-template',
+      'oneToMany',
+      'api::review.review'
+    >;
   };
 }
 
@@ -491,6 +494,18 @@ export interface SharedSlider extends Schema.Component {
   };
   attributes: {
     files: Attribute.Media;
+  };
+}
+
+export interface SharedStepTemplate extends Schema.Component {
+  collectionName: 'components_shared_step_templates';
+  info: {
+    displayName: 'stepTemplate';
+  };
+  attributes: {
+    tag: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
   };
 }
 
@@ -613,6 +628,7 @@ declare module '@strapi/types' {
       'shared.hero-home-template': SharedHeroHomeTemplate;
       'shared.hero-template': SharedHeroTemplate;
       'shared.hero': SharedHero;
+      'shared.input-template': SharedInputTemplate;
       'shared.item-value': SharedItemValue;
       'shared.items-evolutiontemplate': SharedItemsEvolutiontemplate;
       'shared.items-find': SharedItemsFind;
@@ -628,10 +644,12 @@ declare module '@strapi/types' {
       'shared.onboarding-template': SharedOnboardingTemplate;
       'shared.products': SharedProducts;
       'shared.quote': SharedQuote;
+      'shared.review-template': SharedReviewTemplate;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.services-template': SharedServicesTemplate;
       'shared.slider': SharedSlider;
+      'shared.step-template': SharedStepTemplate;
       'shared.studies-template': SharedStudiesTemplate;
       'shared.studies': SharedStudies;
       'shared.sub-nav-items': SharedSubNavItems;
