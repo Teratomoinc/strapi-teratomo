@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_step_templates",
   "info": {
-    "displayName": "stepTemplate"
+    "displayName": "stepTemplate",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,6 +14,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "key": {
+      "type": "string"
     }
   }
 }

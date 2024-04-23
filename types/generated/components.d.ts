@@ -227,10 +227,13 @@ export interface SharedInputTemplate extends Schema.Component {
   collectionName: 'components_shared_input_templates';
   info: {
     displayName: 'inputTemplate';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
     placeholder: Attribute.String;
+    key: Attribute.String;
+    errorMessage: Attribute.String;
   };
 }
 
@@ -501,11 +504,13 @@ export interface SharedStepTemplate extends Schema.Component {
   collectionName: 'components_shared_step_templates';
   info: {
     displayName: 'stepTemplate';
+    description: '';
   };
   attributes: {
     tag: Attribute.String;
     title: Attribute.String;
     description: Attribute.Text;
+    key: Attribute.String;
   };
 }
 
