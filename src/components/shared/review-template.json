@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_review_templates",
+  "info": {
+    "displayName": "reviewTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
+    }
+  }
+}

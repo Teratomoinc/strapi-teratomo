@@ -166,6 +166,17 @@
         }
       },
       "component": "shared.onboarding-template"
+    },
+    "reviews": {
+      "displayName": "reviewTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.review-template"
     }
   }
 }

@@ -109,6 +109,14 @@
           "localized": true
         }
       }
+    },
+    "startProjectButton": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

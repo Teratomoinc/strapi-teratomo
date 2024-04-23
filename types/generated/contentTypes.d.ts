@@ -1271,6 +1271,12 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
           localized: true;
         };
       }>;
+    startProjectButton: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1471,6 +1477,12 @@ export interface ApiHomeAboutHomeAbout extends Schema.SingleType {
         };
       }>;
     onboarding: Attribute.Component<'shared.onboarding-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    reviews: Attribute.Component<'shared.review-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
