@@ -402,6 +402,7 @@ export interface SharedOnboardingTemplate extends Schema.Component {
     buttonFinish: Attribute.String;
     steps: Attribute.Component<'shared.step-template', true>;
     inputs: Attribute.Component<'shared.input-template', true>;
+    finishLink: Attribute.String;
   };
 }
 
