@@ -29,6 +29,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.input-template"
+    },
+    "finishLink": {
+      "type": "string"
     }
   }
 }
