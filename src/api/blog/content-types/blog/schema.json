@@ -1,14 +1,14 @@
 {
   "kind": "singleType",
-  "collectionName": "abouts",
+  "collectionName": "blogs",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About Us",
-    "description": "Write about yourself and the content you create"
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {
     "i18n": {
@@ -19,12 +19,12 @@
     "metadata": {
       "type": "component",
       "repeatable": false,
+      "component": "shared.metada-template",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "shared.metada-template"
+      }
     },
     "hero": {
       "type": "component",
@@ -35,17 +35,6 @@
         }
       },
       "component": "shared.hero-template"
-    },
-    "values": {
-      "displayName": "valuesTemplate",
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "shared.values-template"
     }
   }
 }

@@ -793,17 +793,36 @@ export interface ApiAboutAbout extends Schema.SingleType {
   info: {
     singularName: 'about';
     pluralName: 'abouts';
-    displayName: 'About';
+    displayName: 'About Us';
     description: 'Write about yourself and the content you create';
   };
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
-    blocks: Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero: Attribute.Component<'shared.hero-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    values: Attribute.Component<'shared.values-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -818,6 +837,12 @@ export interface ApiAboutAbout extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::about.about',
+      'oneToMany',
+      'api::about.about'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -973,6 +998,51 @@ export interface ApiBlockchainDevBlockchainDev extends Schema.SingleType {
       'api::blockchain-dev.blockchain-dev',
       'oneToMany',
       'api::blockchain-dev.blockchain-dev'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiBlogBlog extends Schema.SingleType {
+  collectionName: 'blogs';
+  info: {
+    singularName: 'blog';
+    pluralName: 'blogs';
+    displayName: 'Blog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero: Attribute.Component<'shared.hero-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::blog.blog',
+      'oneToMany',
+      'api::blog.blog'
     >;
     locale: Attribute.String;
   };
@@ -1621,6 +1691,12 @@ export interface ApiOemSaleOemSale extends Schema.SingleType {
           localized: true;
         };
       }>;
+    stats: Attribute.Component<'shared.stats-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1781,6 +1857,40 @@ export interface ApiServicePageServicePage extends Schema.SingleType {
   };
 }
 
+export interface ApiSnsPageSnsPage extends Schema.SingleType {
+  collectionName: 'sns';
+  info: {
+    singularName: 'sns-page';
+    pluralName: 'sns';
+    displayName: 'SNS';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'shared.hero-template'>;
+    metadata: Attribute.Component<'shared.metada-template'>;
+    features: Attribute.Component<'shared.featurestemplate', true>;
+    evolution: Attribute.Component<'shared.evolution-template'>;
+    studies: Attribute.Component<'shared.studies-template'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sns-page.sns-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sns-page.sns-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Schema.CollectionType {
   collectionName: 'tests';
   info: {
@@ -1825,6 +1935,7 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::blockchain-dev.blockchain-dev': ApiBlockchainDevBlockchainDev;
+      'api::blog.blog': ApiBlogBlog;
       'api::business.business': ApiBusinessBusiness;
       'api::category.category': ApiCategoryCategory;
       'api::contact.contact': ApiContactContact;
@@ -1836,6 +1947,7 @@ declare module '@strapi/types' {
       'api::oem-sale.oem-sale': ApiOemSaleOemSale;
       'api::review.review': ApiReviewReview;
       'api::service-page.service-page': ApiServicePageServicePage;
+      'api::sns-page.sns-page': ApiSnsPageSnsPage;
       'api::test.test': ApiTestTest;
     }
   }
