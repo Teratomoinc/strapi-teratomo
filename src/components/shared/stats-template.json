@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_stats_templates",
+  "info": {
+    "displayName": "statsTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "percentage": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    }
+  }
+}
