@@ -4,37 +4,67 @@
   "info": {
     "singularName": "sns-page",
     "pluralName": "sns",
-    "displayName": "SNS"
+    "displayName": "SNS",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "hero": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.hero-template"
+      "component": "shared.hero-template",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "metadata": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.metada-template"
+      "component": "shared.metada-template",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "features": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.featurestemplate"
+      "component": "shared.featurestemplate",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "evolution": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.evolution-template"
+      "component": "shared.evolution-template",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "studies": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.studies-template"
+      "component": "shared.studies-template",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

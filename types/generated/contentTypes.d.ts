@@ -1863,16 +1863,47 @@ export interface ApiSnsPageSnsPage extends Schema.SingleType {
     singularName: 'sns-page';
     pluralName: 'sns';
     displayName: 'SNS';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    hero: Attribute.Component<'shared.hero-template'>;
-    metadata: Attribute.Component<'shared.metada-template'>;
-    features: Attribute.Component<'shared.featurestemplate', true>;
-    evolution: Attribute.Component<'shared.evolution-template'>;
-    studies: Attribute.Component<'shared.studies-template'>;
+    hero: Attribute.Component<'shared.hero-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    features: Attribute.Component<'shared.featurestemplate', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    evolution: Attribute.Component<'shared.evolution-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    studies: Attribute.Component<'shared.studies-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1888,6 +1919,12 @@ export interface ApiSnsPageSnsPage extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::sns-page.sns-page',
+      'oneToMany',
+      'api::sns-page.sns-page'
+    >;
+    locale: Attribute.String;
   };
 }
 
