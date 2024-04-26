@@ -23,6 +23,11 @@
     },
     "button": {
       "type": "string"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.metada-template"
     }
   }
 }
