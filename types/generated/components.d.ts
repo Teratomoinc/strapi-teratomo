@@ -414,6 +414,7 @@ export interface SharedOnboardingTemplate extends Schema.Component {
     steps: Attribute.Component<'shared.step-template', true>;
     inputs: Attribute.Component<'shared.input-template', true>;
     finishLink: Attribute.String;
+    metadata: Attribute.Component<'shared.metada-template'>;
   };
 }
 
