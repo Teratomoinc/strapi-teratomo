@@ -16,6 +16,8 @@ module.exports = ({ env}) => [
     config: {
       headers: '*',
       origin: ['*', "localhost:3000"],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'HEAD'],
+      credentials: false,
     }
   },
   'strapi::poweredBy',
