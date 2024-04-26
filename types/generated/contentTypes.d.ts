@@ -1370,87 +1370,6 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
 }
 
-export interface ApiHomeHome extends Schema.SingleType {
-  collectionName: 'homes';
-  info: {
-    singularName: 'home';
-    pluralName: 'homes';
-    displayName: 'Home';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    body: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    brands: Attribute.Component<'shared.item-value', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    teamList: Attribute.Component<'shared.team-list', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    products: Attribute.Component<'shared.products', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    contacts: Attribute.Component<'shared.contacts', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    items: Attribute.Component<'shared.basic-item', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    mission: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    vission: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::home.home',
-      'oneToMany',
-      'api::home.home'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiHomeAboutHomeAbout extends Schema.SingleType {
   collectionName: 'home_abouts';
   info: {
@@ -1786,77 +1705,6 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
-export interface ApiServicePageServicePage extends Schema.SingleType {
-  collectionName: 'service_pages';
-  info: {
-    singularName: 'service-page';
-    pluralName: 'service-pages';
-    displayName: 'Service Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    blockchainDev: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    fintechDev: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    oemSales: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    business: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    sns: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::service-page.service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::service-page.service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::service-page.service-page',
-      'oneToMany',
-      'api::service-page.service-page'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiSnsPageSnsPage extends Schema.SingleType {
   collectionName: 'sns';
   info: {
@@ -1990,12 +1838,10 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::fintech-dev.fintech-dev': ApiFintechDevFintechDev;
       'api::global.global': ApiGlobalGlobal;
-      'api::home.home': ApiHomeHome;
       'api::home-about.home-about': ApiHomeAboutHomeAbout;
       'api::legal.legal': ApiLegalLegal;
       'api::oem-sale.oem-sale': ApiOemSaleOemSale;
       'api::review.review': ApiReviewReview;
-      'api::service-page.service-page': ApiServicePageServicePage;
       'api::sns-page.sns-page': ApiSnsPageSnsPage;
       'api::test.test': ApiTestTest;
     }
