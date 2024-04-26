@@ -55,21 +55,32 @@ export interface SharedBrandsTemplate extends Schema.Component {
   };
 }
 
+export interface SharedCardTemplate extends Schema.Component {
+  collectionName: 'components_shared_card_templates';
+  info: {
+    displayName: 'cardTemplate';
+  };
+  attributes: {
+    tag: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 export interface SharedContactUs extends Schema.Component {
   collectionName: 'components_shared_contactuses';
   info: {
     displayName: 'contactUs';
     icon: 'arrowUp';
+    description: '';
   };
   attributes: {
-    text: Attribute.String;
-    email: Attribute.String;
+    tag: Attribute.String;
     title: Attribute.String;
-    address: Attribute.String;
-    message: Attribute.String;
-    fullName: Attribute.String;
-    subtitle: Attribute.String;
     description: Attribute.Text;
+    inputs: Attribute.Component<'shared.input-template', true>;
+    button: Attribute.String;
   };
 }
 
@@ -406,6 +417,29 @@ export interface SharedOnboardingTemplate extends Schema.Component {
   };
 }
 
+export interface SharedProcessItemTemplate extends Schema.Component {
+  collectionName: 'components_shared_process_item_templates';
+  info: {
+    displayName: 'processItemTemplate';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    icon: Attribute.Media;
+  };
+}
+
+export interface SharedProcessTemplate extends Schema.Component {
+  collectionName: 'components_shared_process_templates';
+  info: {
+    displayName: 'processTemplate';
+  };
+  attributes: {
+    items: Attribute.Component<'shared.process-item-template', true>;
+    title: Attribute.String;
+  };
+}
+
 export interface SharedProducts extends Schema.Component {
   collectionName: 'components_shared_products';
   info: {
@@ -654,6 +688,7 @@ declare module '@strapi/types' {
       'shared.basic-item': SharedBasicItem;
       'shared.basic-template': SharedBasicTemplate;
       'shared.brands-template': SharedBrandsTemplate;
+      'shared.card-template': SharedCardTemplate;
       'shared.contact-us': SharedContactUs;
       'shared.contacts-template': SharedContactsTemplate;
       'shared.contacts': SharedContacts;
@@ -680,6 +715,8 @@ declare module '@strapi/types' {
       'shared.mission-template': SharedMissionTemplate;
       'shared.nav-item': SharedNavItem;
       'shared.onboarding-template': SharedOnboardingTemplate;
+      'shared.process-item-template': SharedProcessItemTemplate;
+      'shared.process-template': SharedProcessTemplate;
       'shared.products': SharedProducts;
       'shared.quote': SharedQuote;
       'shared.review-template': SharedReviewTemplate;
