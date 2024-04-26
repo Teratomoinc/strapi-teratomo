@@ -1705,77 +1705,6 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
-export interface ApiServicePageServicePage extends Schema.SingleType {
-  collectionName: 'service_pages';
-  info: {
-    singularName: 'service-page';
-    pluralName: 'service-pages';
-    displayName: 'Service Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    blockchainDev: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    fintechDev: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    oemSales: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    business: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    sns: Attribute.JSON &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::service-page.service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::service-page.service-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::service-page.service-page',
-      'oneToMany',
-      'api::service-page.service-page'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiSnsPageSnsPage extends Schema.SingleType {
   collectionName: 'sns';
   info: {
@@ -1913,7 +1842,6 @@ declare module '@strapi/types' {
       'api::legal.legal': ApiLegalLegal;
       'api::oem-sale.oem-sale': ApiOemSaleOemSale;
       'api::review.review': ApiReviewReview;
-      'api::service-page.service-page': ApiServicePageServicePage;
       'api::sns-page.sns-page': ApiSnsPageSnsPage;
       'api::test.test': ApiTestTest;
     }
