@@ -81,6 +81,7 @@ export interface SharedContactUs extends Schema.Component {
     description: Attribute.Text;
     inputs: Attribute.Component<'shared.input-template', true>;
     button: Attribute.String;
+    metadata: Attribute.Component<'shared.metada-template'>;
   };
 }
 
