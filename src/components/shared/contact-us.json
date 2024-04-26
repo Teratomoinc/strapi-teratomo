@@ -2,33 +2,27 @@
   "collectionName": "components_shared_contactuses",
   "info": {
     "displayName": "contactUs",
-    "icon": "arrowUp"
+    "icon": "arrowUp",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "string"
-    },
-    "email": {
+    "tag": {
       "type": "string"
     },
     "title": {
       "type": "string"
     },
-    "address": {
-      "type": "string"
-    },
-    "message": {
-      "type": "string"
-    },
-    "fullName": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
+    },
+    "inputs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.input-template"
+    },
+    "button": {
+      "type": "string"
     }
   }
 }

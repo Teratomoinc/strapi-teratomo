@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_process_templates",
+  "info": {
+    "displayName": "processTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "displayName": "processItemTemplate",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.process-item-template"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

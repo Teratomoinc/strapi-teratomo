@@ -65,6 +65,28 @@
           "localized": true
         }
       }
+    },
+    "ourProcess": {
+      "displayName": "processTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.process-template"
+    },
+    "cards": {
+      "displayName": "cardTemplate",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.card-template"
     }
   }
 }

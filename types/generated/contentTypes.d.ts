@@ -1904,6 +1904,18 @@ export interface ApiSnsPageSnsPage extends Schema.SingleType {
           localized: true;
         };
       }>;
+    ourProcess: Attribute.Component<'shared.process-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cards: Attribute.Component<'shared.card-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

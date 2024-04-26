@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_process_item_templates",
+  "info": {
+    "displayName": "processItemTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
