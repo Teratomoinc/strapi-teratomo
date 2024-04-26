@@ -16,7 +16,6 @@ module.exports = ({ env}) => [
     config: {
       headers: '*',
       origin: '*',
-      credentials: false,
     }
   },
   'strapi::poweredBy',
