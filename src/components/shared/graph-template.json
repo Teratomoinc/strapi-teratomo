@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_graph_templates",
+  "info": {
+    "displayName": "graphTemplate",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "graphTags": {
+      "displayName": "graphTagsTemplate",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.graph-tags-template"
+    },
+    "graphImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

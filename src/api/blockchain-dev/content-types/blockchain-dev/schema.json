@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blockchain-dev",
     "pluralName": "blockchain-devs",
-    "displayName": "blockchainDev"
+    "displayName": "blockchainDev",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -64,6 +65,17 @@
         }
       },
       "component": "shared.metada-template"
+    },
+    "graph": {
+      "displayName": "graphTemplate",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.graph-template"
     }
   }
 }

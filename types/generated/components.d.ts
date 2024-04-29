@@ -194,6 +194,29 @@ export interface SharedFooter extends Schema.Component {
   attributes: {};
 }
 
+export interface SharedGraphTagsTemplate extends Schema.Component {
+  collectionName: 'components_shared_graph_tags_templates';
+  info: {
+    displayName: 'graphTagsTemplate';
+  };
+  attributes: {
+    title: Attribute.String;
+    color: Attribute.String;
+  };
+}
+
+export interface SharedGraphTemplate extends Schema.Component {
+  collectionName: 'components_shared_graph_templates';
+  info: {
+    displayName: 'graphTemplate';
+    description: '';
+  };
+  attributes: {
+    graphTags: Attribute.Component<'shared.graph-tags-template', true>;
+    graphImage: Attribute.Media;
+  };
+}
+
 export interface SharedHeroHomeTemplate extends Schema.Component {
   collectionName: 'components_shared_hero_home_templates';
   info: {
@@ -700,6 +723,8 @@ declare module '@strapi/types' {
       'shared.features': SharedFeatures;
       'shared.featurestemplate': SharedFeaturestemplate;
       'shared.footer': SharedFooter;
+      'shared.graph-tags-template': SharedGraphTagsTemplate;
+      'shared.graph-template': SharedGraphTemplate;
       'shared.hero-home-template': SharedHeroHomeTemplate;
       'shared.hero-template': SharedHeroTemplate;
       'shared.hero': SharedHero;

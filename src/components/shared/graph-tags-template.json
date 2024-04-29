@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_graph_tags_templates",
+  "info": {
+    "displayName": "graphTagsTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}
