@@ -87,6 +87,16 @@
         }
       },
       "component": "shared.card-template"
+    },
+    "graph": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.graph-template"
     }
   }
 }

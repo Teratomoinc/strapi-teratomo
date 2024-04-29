@@ -939,6 +939,7 @@ export interface ApiBlockchainDevBlockchainDev extends Schema.SingleType {
     singularName: 'blockchain-dev';
     pluralName: 'blockchain-devs';
     displayName: 'blockchainDev';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -974,6 +975,12 @@ export interface ApiBlockchainDevBlockchainDev extends Schema.SingleType {
         };
       }>;
     metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    graph: Attribute.Component<'shared.graph-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1095,6 +1102,12 @@ export interface ApiBusinessBusiness extends Schema.SingleType {
           localized: true;
         };
       }>;
+    stats: Attribute.Component<'shared.stats-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1204,6 +1217,7 @@ export interface ApiFintechDevFintechDev extends Schema.SingleType {
     singularName: 'fintech-dev';
     pluralName: 'fintech-devs';
     displayName: 'fintechDev';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1239,6 +1253,12 @@ export interface ApiFintechDevFintechDev extends Schema.SingleType {
         };
       }>;
     metadata: Attribute.Component<'shared.metada-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    graph: Attribute.Component<'shared.graph-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1759,6 +1779,12 @@ export interface ApiSnsPageSnsPage extends Schema.SingleType {
         };
       }>;
     cards: Attribute.Component<'shared.card-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    graph: Attribute.Component<'shared.graph-template'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

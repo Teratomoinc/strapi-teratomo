@@ -65,6 +65,16 @@
         }
       },
       "component": "shared.metada-template"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.stats-template"
     }
   }
 }
