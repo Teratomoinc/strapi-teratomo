@@ -76,6 +76,27 @@
         }
       },
       "component": "shared.graph-template"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.card-template"
+    },
+    "stacks": {
+      "displayName": "stacksTemplate",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.stacks-template"
     }
   }
 }

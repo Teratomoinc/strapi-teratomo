@@ -560,6 +560,28 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedStackItemTemplate extends Schema.Component {
+  collectionName: 'components_shared_stack_item_templates';
+  info: {
+    displayName: 'stackItemTemplate';
+  };
+  attributes: {
+    name: Attribute.String;
+    icon: Attribute.Media;
+  };
+}
+
+export interface SharedStacksTemplate extends Schema.Component {
+  collectionName: 'components_shared_stacks_templates';
+  info: {
+    displayName: 'stacksTemplate';
+  };
+  attributes: {
+    title: Attribute.String;
+    items: Attribute.Component<'shared.stack-item-template', true>;
+  };
+}
+
 export interface SharedStatsTemplate extends Schema.Component {
   collectionName: 'components_shared_stats_templates';
   info: {
@@ -681,6 +703,14 @@ export interface SharedTeamTemplate extends Schema.Component {
   };
 }
 
+export interface SharedTest extends Schema.Component {
+  collectionName: 'components_shared_tests';
+  info: {
+    displayName: 'test';
+  };
+  attributes: {};
+}
+
 export interface SharedValuesTemplate extends Schema.Component {
   collectionName: 'components_shared_values_templates';
   info: {
@@ -751,6 +781,8 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.services-template': SharedServicesTemplate;
       'shared.slider': SharedSlider;
+      'shared.stack-item-template': SharedStackItemTemplate;
+      'shared.stacks-template': SharedStacksTemplate;
       'shared.stats-template': SharedStatsTemplate;
       'shared.step-template': SharedStepTemplate;
       'shared.studies-template': SharedStudiesTemplate;
@@ -759,6 +791,7 @@ declare module '@strapi/types' {
       'shared.team-list-template': SharedTeamListTemplate;
       'shared.team-list': SharedTeamList;
       'shared.team-template': SharedTeamTemplate;
+      'shared.test': SharedTest;
       'shared.values-template': SharedValuesTemplate;
       'shared.weare-template': SharedWeareTemplate;
     }
