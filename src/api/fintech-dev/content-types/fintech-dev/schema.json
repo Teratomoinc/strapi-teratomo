@@ -75,6 +75,16 @@
         }
       },
       "component": "shared.graph-template"
+    },
+    "stacks": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.stacks-template"
     }
   }
 }

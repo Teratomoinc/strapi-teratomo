@@ -986,6 +986,18 @@ export interface ApiBlockchainDevBlockchainDev extends Schema.SingleType {
           localized: true;
         };
       }>;
+    cards: Attribute.Component<'shared.card-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    stacks: Attribute.Component<'shared.stacks-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1259,6 +1271,12 @@ export interface ApiFintechDevFintechDev extends Schema.SingleType {
         };
       }>;
     graph: Attribute.Component<'shared.graph-template'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    stacks: Attribute.Component<'shared.stacks-template', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1631,6 +1649,12 @@ export interface ApiOemSaleOemSale extends Schema.SingleType {
         };
       }>;
     stats: Attribute.Component<'shared.stats-template', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    stacks: Attribute.Component<'shared.stacks-template', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

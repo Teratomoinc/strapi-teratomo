@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_stack_item_templates",
+  "info": {
+    "displayName": "stackItemTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
