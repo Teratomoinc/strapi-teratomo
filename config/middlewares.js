@@ -6,7 +6,7 @@ module.exports = ({ env}) => [
       contentSecurityPolicy: {
         directives: {
           'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
-          'img-src': ["'self'", 'data:', 'cdn.jsdelivr.net', 'strapi.io', 'teratomo-web-prod.s3.us-east-1.amazonaws.com'],
+          'img-src': ["'self'", 'data:', 'cdn.jsdelivr.net', 'strapi.io', 'teratomo-web-prod.s3.us-east-1.amazonaws.com','teratomo-web.s3.us-east-1.amazonaws.com'],
         },
       }
     },
