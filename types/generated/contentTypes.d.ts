@@ -1838,28 +1838,6 @@ export interface ApiSnsPageSnsPage extends Schema.SingleType {
   };
 }
 
-export interface ApiTestTest extends Schema.CollectionType {
-  collectionName: 'tests';
-  info: {
-    singularName: 'test';
-    pluralName: 'tests';
-    displayName: 'test';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1893,7 +1871,6 @@ declare module '@strapi/types' {
       'api::oem-sale.oem-sale': ApiOemSaleOemSale;
       'api::review.review': ApiReviewReview;
       'api::sns-page.sns-page': ApiSnsPageSnsPage;
-      'api::test.test': ApiTestTest;
     }
   }
 }
